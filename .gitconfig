@@ -89,3 +89,6 @@
 
 [push]
 	default = matching
+[user]
+	name = Rob Hilgefort
+	email = rjhilgefort@gmail.com

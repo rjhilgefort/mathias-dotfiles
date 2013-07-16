@@ -38,7 +38,8 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
-# Start the ssh-agent automatically on startup
+# Start the ssh-agent automatically on startup #
+################################################
 # https://help.github.com/articles/working-with-ssh-key-passphrases
 SSH_ENV="$HOME/.ssh/environment"
 

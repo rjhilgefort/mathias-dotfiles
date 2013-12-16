@@ -76,7 +76,8 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
-	tool = meld
+	tool = Kaleidoscope
+
 [mergetool]
 	keepBackup = false
 
@@ -106,7 +107,7 @@
 	insteadOf = "bitbucket:"
 
 [push]
-	default = matching
+	default = current
 [user]
 	name = Rob Hilgefort
 	email = rjhilgefort@gmail.com

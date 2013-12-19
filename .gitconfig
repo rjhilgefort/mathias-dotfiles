@@ -54,6 +54,11 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+
+# Merge
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
@@ -61,6 +66,15 @@
 
 [mergetool]
 	keepBackup = false
+	prompt = false
+
+# Diff
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
 
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]

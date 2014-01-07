@@ -37,6 +37,7 @@
 
 	# RJH additions
 	st = status -s
+	co = checkout
 
 [apply]
 	# Detect whitespace errors when applying a patch
@@ -82,7 +83,6 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 	tool = Kaleidoscope
-
 [mergetool]
 	keepBackup = false
 	prompt = false

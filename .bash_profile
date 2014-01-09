@@ -74,7 +74,7 @@ function test_identities {
 
 # check for running ssh-agent with proper $SSH_AGENT_PID
 if [ -n "$SSH_AGENT_PID" ]; then
-    ps -f -u $USERNAME | grep "$SSH_AGENT_PID" | grep ssh-agent > /dev/null
+    ps -f -u rjhilgefort | grep "$SSH_AGENT_PID" | grep ssh-agent > /dev/null
     if [ $? -eq 0 ]; then
   test_identities
     fi
@@ -84,7 +84,7 @@ else
     if [ -f "$SSH_ENV" ]; then
   . "$SSH_ENV" > /dev/null
     fi
-    ps -f -u $USERNAME | grep "$SSH_AGENT_PID" | grep ssh-agent > /dev/null
+    ps -f -u rjhilgefort | grep "$SSH_AGENT_PID" | grep ssh-agent > /dev/null
     if [ $? -eq 0 ]; then
         test_identities
     else

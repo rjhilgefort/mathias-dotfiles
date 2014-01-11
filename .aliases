@@ -140,3 +140,7 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # RJH additions
 alias ducurr='du -x -h --max-depth=1 ./'
+
+# Symantec Management Client
+alias smcstart='sudo /Library/StartupItems/SMC/smclient --start'
+alias smcstart='sudo /Library/StartupItems/SMC/smclient --stop'

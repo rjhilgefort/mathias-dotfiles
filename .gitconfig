@@ -101,24 +101,36 @@
 	merge = refs/heads/master
 
 # URL shorthands
+# ################
+# github
 [url "git@github.com:"]
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
 	pushInsteadOf = "git://github.com/"
 [url "git://github.com/"]
 	insteadOf = "github:"
+# github gist
 [url "git@gist.github.com:"]
 	insteadOf = "gst:"
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
+# bitbucket
 [url "git@bitbucket.org:"]
 	insteadOf = "bb:"
 	pushInsteadOf = "bitbucket:"
 	pushInsteadOf = "git://bitbucket.org/"
 [url "git://bitbucket.org/"]
 	insteadOf = "bitbucket:"
+# zipscene
+[url "git@git.zipscene.com:"]
+	insteadOf = "zs:"
+	pushInsteadOf = "zipscene:"
+	pushInsteadOf = "git://git.zipscene.com/"
+[url "git://git.zipscene.com/"]
+	insteadOf = "zipscene:"
+
 
 [push]
 	default = current

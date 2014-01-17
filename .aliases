@@ -154,9 +154,33 @@ alias reload="exec $SHELL -l"
 # Faster npm for europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
 
+# ##############################################################################
 # RJH additions
-alias ducurr='du -x -h --max-depth=1 ./'
+# ##############################################################################
 
+# various helpers #
+# #################
+alias ducurr='du -x -h --max-depth=1 ./'
+alias appsoninternet='sudo lsof -P -i -n | cut -f 1 -d " " | uniq'
+alias listopenports='sudo lsof -i -P | grep -i "listen"'
+alias mountdrobo="mount -t smbfs //rjhilgefort@10.0.1.2/Home ~/Drobo"
+
+# ssh shortcuts #
+# ###############
+alias sshgd='ssh robhilgefort@97.74.249.1'
+alias sshmt='ssh robhilgefort.com@s160575.gridserver.com'
+alias sshpif='ssh robhilgefort@02d005f.netsolhost.com'
+# zipscene
+alias sshclstaging='ssh rhilgefort@cl.staging'
+
+# Program Specific #
+# ##################
 # Symantec Management Client
 alias smcstart='sudo /Library/StartupItems/SMC/smclient --start'
 alias smcstart='sudo /Library/StartupItems/SMC/smclient --stop'
+
+# Project Stuff #
+#################
+alias presentationpotbelly="node --debug app.js -b potbelly"
+alias presentationchurchs="node --debug app.js -b churchs"
+alias presentationprod="node app.js -f -e prod --http 80 --https 443 -k /tmp/var/keys"

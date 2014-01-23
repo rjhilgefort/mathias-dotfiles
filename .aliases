@@ -149,6 +149,10 @@ alias appsoninternet='sudo lsof -P -i -n | cut -f 1 -d " " | uniq'
 alias listopenports='sudo lsof -i -P | grep -i "listen"'
 alias mountdrobo="mount -t smbfs //rjhilgefort@10.0.1.2/Home ~/Drobo"
 
+# not helpfull helpers #
+# ######################
+alias starwars="telnet towel.blinkenlights.nl"
+
 # ssh shortcuts #
 # ###############
 alias sshgd='ssh robhilgefort@97.74.249.1'

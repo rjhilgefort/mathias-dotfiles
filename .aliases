@@ -169,7 +169,9 @@ alias smcstart='sudo /Library/StartupItems/SMC/smclient --stop'
 
 # Project Stuff #
 #################
-alias presentationpotbelly="node --debug app.js -b potbelly"
-alias presentationchurchs="node --debug app.js -b churchs"
-alias presentationprod="node app.js -f -e prod --http 80 --https 443 -k /tmp/var/keys"
+alias presentpotbelly="node app.js -b potbelly"
+alias presentchurchs="node app.js -b churchs"
+alias presentcafezipscene='nodemon -e ".js|.html|.less" app.js -b cafe-zipscene -r'
+alias presentmrhantons='nodemon -e ".js|.html|.less" app.js -b mrhantons -r'
+alias presentprod="node app.js -f -e prod --http 80 --https 443 -k /tmp/var/keys"
 

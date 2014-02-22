@@ -169,11 +169,16 @@ alias smcstart='sudo /Library/StartupItems/SMC/smclient --stop'
 
 # Project Stuff #
 #################
-alias presentpotbelly="node app.js -b potbelly"
-alias presentchurchs="node app.js -b churchs"
-alias presentcafezipscene='nodemon -e js,html,less app.js -b cafe-zipscene'
-alias presentcafezipsceneredis='nodemon -e js,html,less app.js -b cafe-zipscene -r'
-alias presentmrhantons='nodemon -e js,html,less app.js -b mrhantons'
-alias presentmrhantonsredis='nodemon -e js,html,less app.js -b mrhantons -r'
-alias presentprod="node app.js -f -e prod --http 80 --https 443 -k /tmp/var/keys"
+alias present-potbelly="node app.js -b potbelly"
+alias present-churchs="node app.js -b churchs"
+# cafe-zipscene
+alias present-cafezipscene='nodemon -e js,html,less app.js -b cafe-zipscene'
+alias present-cafezipscene-redis='nodemon -e js,html,less app.js -b cafe-zipscene -r'
+alias present-cafezipscene-debug='node --debug-brk app.js -b cafe-zipscene'
+# mrhantons
+alias present-mrhantons='nodemon -e js,html,less app.js -b mrhantons'
+alias present-mrhantons-redis='nodemon -e js,html,less app.js -b mrhantons -r'
+alias present-mrhantons-debug='node --debug-brk app.js -b mrhantons'
+# prod
+alias present-prod="node app.js -f -e prod --http 80 --https 443 -k /tmp/var/keys"
 

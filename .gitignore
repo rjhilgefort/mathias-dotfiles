@@ -25,9 +25,10 @@
 
 # Logs and databases #
 ######################
-*.log
-*.sql
-*.sqlite
+# make this decision on a per project basis
+# *.log
+# *.sql
+# *.sqlite
 
 # OS generated files #
 ######################

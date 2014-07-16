@@ -28,6 +28,12 @@
 	# Pull and Push
 	# (experimental (not safe to use in all cases))
 	sync = !"git pull; git push"
+	# Stash stuff
+	sl = stash list
+	ss = stash save
+	sa = "!sh -c 'git stash apply stash@{$1}' -"
+	sp = "!sh -c 'git stash pop stash@{$1}' -"
+	sd = "!sh -c 'git stash drop stash@{$1}' -"
 
 [apply]
 	# Detect whitespace errors when applying a patch

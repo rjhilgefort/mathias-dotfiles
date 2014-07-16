@@ -139,7 +139,6 @@ alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # ##############################################################################
-# RJH additions
 # ##############################################################################
 
 # various helpers #
@@ -149,6 +148,9 @@ alias appsoninternet='sudo lsof -P -i -n | cut -f 1 -d " " | uniq'
 alias listopenports='sudo lsof -i -P | grep -i "listen"'
 alias mountdrobo="mount -t smbfs //rjhilgefort@10.0.1.2/Home ~/Drobo"
 alias git-submodule-list="grep path .gitmodules | sed 's/.*= //'"
+alias dock-meh="defaults write com.apple.dock autohide-delay -float 3 && killall Dock" # 5 seconds
+alias dock-fuckoff="defaults write com.apple.dock autohide-delay -float 1000 && killall Dock" # 1000 seconds
+alias dock-reset="defaults delete com.apple.dock autohide-delay && killall Dock" # Back to normal
 
 # not helpfull helpers #
 # ######################
@@ -173,13 +175,27 @@ alias smcstart='sudo /Library/StartupItems/SMC/smclient --stop'
 #################
 alias present-potbelly="node app.js -b potbelly"
 alias present-churchs="node app.js -b churchs"
+# potbelly
+alias present-potbelly='nodemon -e js,html,less app.js -- -b potbelly'
+alias present-potbelly-local='nodemon -e js,html,less app.js -- -d local -b potbelly'
+alias present-potbelly-redis='nodemon -e js,html,less app.js -- -b potbelly -r'
+alias present-potbelly-debug='node --debug-brk app.js -b potbelly'
+alias present-potbelly-app='nodemon -e js,html,less app.js -- -p phonegap -d qa -b potbelly -r'
+alias present-potbelly-app-export='node app.js -e staging -d qa -b potbelly -p phonegap --phonegap ~/zipscene/apps/potbellyapp/www/ --phonegap-server http://potbelly.qa.zipscene.com/'
 # zcafe
 alias present-zcafe='nodemon -e js,html,less app.js -- -d gma -b zcafe'
-alias present-zcafe-local='nodemon -e js,html,less app.js -- -d gma -b zcafe'
+alias present-zcafe-local='nodemon -e js,html,less app.js -- -d local -b zcafe'
 alias present-zcafe-redis='nodemon -e js,html,less app.js -- -d gma -b zcafe -r'
 alias present-zcafe-debug='node --debug-brk app.js -d gma -b zcafe'
 alias present-zcafe-app='nodemon -e js,html,less app.js -- -p phonegap -d gma -b zcafe -r'
 alias present-zcafe-app-export='node app.js -e staging -d gma -b zcafe -p phonegap --phonegap ~/zipscene/apps/zcafe/www/ --phonegap-server http://zcafe.qa.zipscene.com/'
+# hooters
+alias present-hooters='nodemon -e js,html,less app.js -- -b hooters'
+alias present-hooters-local='nodemon -e js,html,less app.js -- -d local -b hooters'
+alias present-hooters-redis='nodemon -e js,html,less app.js -- -b hooters -r'
+alias present-hooters-debug='node --debug-brk app.js -b hooters'
+alias present-hooters-app='nodemon -e js,html,less app.js -- -p phonegap -d qa -b hooters -r'
+alias present-hooters-app-export='node app.js -e staging -d qa -b hooters -p phonegap --phonegap ~/zipscene/apps/hootclub/www/ --phonegap-server http://hooters.qa.zipscene.com/'
 # keystone
 alias present-keystone='nodemon -e js,html,less app.js -- -b keystone'
 alias present-keystone-redis='nodemon -e js,html,less app.js -- -b keystone -r'

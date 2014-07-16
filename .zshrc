@@ -76,5 +76,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="subl ~/dotfiles/.zshrc"
+alias ohmyzsh="subl ~/dotfiles/.oh-my-zsh"
+
+# Bash style ..[TAB] completion
+# http://stackoverflow.com/questions/564648/zsh-tab-completion-for-cd
+zstyle -e ':completion:*' special-dirs '[[ $PREFIX = (../)#(|.|..) ]] && reply=(..)'

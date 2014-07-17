@@ -86,7 +86,7 @@ alias starwars="telnet towel.blinkenlights.nl"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # env config
-alias zshconfig="subl ~/dotfiles/.zshrc"
+alias zshconfig="vim ~/dotfiles/.zshrc"
 alias ohmyzsh="subl ~/dotfiles/.oh-my-zsh"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages

@@ -64,9 +64,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
@@ -74,7 +71,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # http://stackoverflow.com/questions/564648/zsh-tab-completion-for-cd
 zstyle -e ':completion:*' special-dirs '[[ $PREFIX = (../)#(|.|..) ]] && reply=(..)'
 
-# RJH alias
+# Alias
 ################################################################################
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -88,6 +85,9 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 # env config
 alias zshconfig="vim ~/dotfiles/.zshrc"
 alias ohmyzsh="subl ~/dotfiles/.oh-my-zsh"
+
+# v => vim
+alias v="vim"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update --system; sudo gem update'

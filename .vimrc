@@ -1,6 +1,3 @@
-" Use the Solarized Dark theme
-" set background=dark
-" colorscheme solarized
 colorscheme molokai
 
 " Make Vim more useful
@@ -105,3 +102,13 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	autocmd BufNewFile,BufRead *.hbs setfiletype html syntax=html
 endif
+
+" disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>

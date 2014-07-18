@@ -109,10 +109,11 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Put up screensaver (when going AFK)
-alias afk="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
+alias afk="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine &> /dev/null"
 
 # size of files/folders in current dir
-alias ducurr='du -x -h --max-depth=1 ./'
+# TODO: This is broken on OSX
+# alias ducurr='du -xh --max-depth=1 ./'
 
 # see what apps are currently using the network
 alias appsoninternet='sudo lsof -P -i -n | cut -f 1 -d " " | uniq'

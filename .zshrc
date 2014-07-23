@@ -67,6 +67,12 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Config, Scripts
+################################################################################
+
+# https://github.com/rupa/z
+source $HOME/bin/z/z.sh
+
 # Bash style ..[TAB] completion
 # http://stackoverflow.com/questions/564648/zsh-tab-completion-for-cd
 zstyle -e ':completion:*' special-dirs '[[ $PREFIX = (../)#(|.|..) ]] && reply=(..)'

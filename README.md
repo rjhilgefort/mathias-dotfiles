@@ -1,8 +1,6 @@
 # Rjhilgefort’s dotfiles
 
-This is my fork of mathiasbynens/dotfiles. Mine is more or less the same, with just a few tweaks here and there. Feel free to poke around, but I recommend you head to his repo instead.
-
-![Screenshot of my shell prompt](http://i.imgur.com/EkEtphC.png)
+This is my fork of mathiasbynens/dotfiles with just a few tweaks here and there. Feel free to poke around, but I recommend you head to his repo instead.
 
 ## Installation
 

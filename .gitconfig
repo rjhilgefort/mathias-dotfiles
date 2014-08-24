@@ -154,7 +154,10 @@
 
 	prompt = false
 
+# Use `origin` as the default remote on the `master` branch in all cases
 [push]
+	remote = origin
+	merge = refs/heads/master
 
 	# Use the Git 1.x.x default to avoid errors on machines with old Git
 	# installations. To use `simple` instead, add this to your `~/.extra` file:
@@ -199,6 +202,7 @@
 
 [url "git://git.zipscene.com/"]
 	insteadOf = "zipscene:"
+
 
 [push]
 	default = current

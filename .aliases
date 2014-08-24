@@ -39,6 +39,9 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Gzip-enabled `curl`
+alias gurl='curl --compressed'
+
 # Get week number
 alias week='date +%V'
 
@@ -52,6 +55,8 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+alias whois="whois -h whois-servers.net"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
@@ -82,6 +87,9 @@ alias c="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# ROT13-encode text. Works for decoding, too! ;)
+alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
@@ -146,6 +154,7 @@ alias reload="exec $SHELL -l"
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu/"
 
 # ##############################################################################
+# RJH additions
 # ##############################################################################
 
 # various helpers #

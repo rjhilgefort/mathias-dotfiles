@@ -154,6 +154,8 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	autocmd BufNewFile,BufRead *.hbs setfiletype html syntax=html
+    " Treat .md files as Markdown
+	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
 " disable arrow keys
